@@ -1,0 +1,12 @@
+[
+  {
+    "text": "Gadgets",
+    "collapsible": true,
+    "items": [
+      {
+        "text": "EasyTier",
+        "link": "/gadgets/EasyTier"
+      }
+    ]
+  }
+]
