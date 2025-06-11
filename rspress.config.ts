@@ -18,4 +18,11 @@ export default defineConfig({
       },
     ],
   },
+  builderConfig: {
+    html: {
+      meta: {
+        robots: 'noindex, nofollow',
+      },
+    },
+  },
 });
