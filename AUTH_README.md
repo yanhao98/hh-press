@@ -27,7 +27,7 @@ import path from 'path';
 export function authPlugin(): RspressPlugin {
   return {
     name: 'auth-plugin',
-    globalUIComponents: [path.join(__dirname, 'AuthGuard.tsx')]
+    globalUIComponents: [path.join(__dirname, 'AuthGuard.tsx')],
   };
 }
 ```
@@ -47,8 +47,8 @@ export const authConfig: Record<string, RouteAuthConfig> = {
     password: 'cheese2024',
     redirectUrl: '/gadgets/Burrata.html',
     title: '🧀 Burrata 页面访问受限',
-    description: '此页面包含特殊内容，需要密码才能访问。'
-  }
+    description: '此页面包含特殊内容，需要密码才能访问。',
+  },
 };
 
 export const passwordHints: Record<string, string> = {
@@ -59,6 +59,7 @@ export const passwordHints: Record<string, string> = {
 ### 3. 认证守卫组件 (`plugins/AuthGuard.tsx`)
 
 核心功能：
+
 - ✅ 检测当前路由是否需要保护
 - ✅ 显示自定义密码输入对话框
 - ✅ 验证用户输入的密码
@@ -71,6 +72,7 @@ export const passwordHints: Record<string, string> = {
 ### 启动和测试
 
 1. **启动开发服务器**：
+
    ```bash
    npm run dev
    ```
@@ -109,21 +111,21 @@ export const authConfig: Record<string, RouteAuthConfig> = {
     password: 'cheese2024',
     redirectUrl: '/gadgets/Burrata.html',
     title: '🧀 Burrata 页面访问受限',
-    description: '此页面包含特殊内容，需要密码才能访问。'
+    description: '此页面包含特殊内容，需要密码才能访问。',
   },
   // 添加新的受保护路由
   '/secret-docs.html': {
     password: 'my-secret-2024',
     redirectUrl: '/secret-docs.html',
     title: '🔐 机密文档',
-    description: '此文档包含机密信息，需要特殊权限访问。'
-  }
+    description: '此文档包含机密信息，需要特殊权限访问。',
+  },
 };
 
 // 为新路由添加密码提示
 export const passwordHints: Record<string, string> = {
   '/gadgets/Burrata.html': 'hint: cheese + year',
-  '/secret-docs.html': 'hint: my-secret + year'
+  '/secret-docs.html': 'hint: my-secret + year',
 };
 ```
 
@@ -150,10 +152,12 @@ export const passwordHints: Record<string, string> = {
 ### 常见问题
 
 1. **页面内容仍然可见**：
+
    - 检查 DOM 选择器 `.rspress-doc` 是否正确
    - 确认组件正确加载
 
 2. **密码验证失败**：
+
    - 检查 `auth-config.ts` 中的密码配置
    - 确认路由路径匹配正确
 
@@ -164,6 +168,7 @@ export const passwordHints: Record<string, string> = {
 ### 开发模式调试
 
 在开发模式下，你可以：
+
 - 打开浏览器开发者工具查看控制台日志
 - 检查 sessionStorage 中的认证状态
 - 查看网络请求确认组件正确加载
@@ -172,9 +177,10 @@ export const passwordHints: Record<string, string> = {
 
 ## 完成状态
 
-✅ **实现完成！** 
+✅ **实现完成！**
 
 你现在可以：
+
 1. 启动开发服务器：`npm run dev`
 2. 访问 http://localhost:3000/gadgets/Burrata.html
 3. 输入密码 `cheese2024` 来测试功能

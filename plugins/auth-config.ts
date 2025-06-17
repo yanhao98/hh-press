@@ -12,7 +12,7 @@ export const authConfig: Record<string, RouteAuthConfig> = {
     password: 'cheese2024',
     redirectUrl: '/gadgets/Burrata.html',
     title: '🧀 Burrata 页面访问受限',
-    description: '此页面包含特殊内容，需要密码才能访问。'
+    description: '此页面包含特殊内容，需要密码才能访问。',
   },
   // 可以在这里添加更多受保护的路由
   // '/secret-page.html': {
