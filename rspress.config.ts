@@ -1,5 +1,6 @@
 import * as path from 'node:path';
 import { defineConfig } from 'rspress/config';
+import { authPlugin } from './plugins/auth-plugin';
 
 export default defineConfig({
   ssg: false,
@@ -10,6 +11,7 @@ export default defineConfig({
   //   light: '/rspress-light-logo.png',
   //   dark: '/rspress-dark-logo.png',
   // },
+  plugins: [authPlugin()],
   themeConfig: {
     socialLinks: [
       {
