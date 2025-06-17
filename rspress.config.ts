@@ -2,6 +2,7 @@ import * as path from 'node:path';
 import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
+  ssg: false,
   root: path.join(__dirname, 'docs'),
   title: 'Cheese Library',
   // icon: '/rspress-icon.png',
