@@ -3,7 +3,7 @@ import { defineConfig } from 'rspress/config';
 import { authPlugin } from './plugins/auth-plugin';
 
 export default defineConfig({
-  ssg: false,
+  ssg: true,
   root: path.join(__dirname, 'docs'),
   title: 'Cheese Library',
   // icon: '/rspress-icon.png',
