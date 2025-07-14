@@ -1,1 +1,9 @@
-["EasyTier", "Burrata"]
+[
+  "EasyTier", 
+  "Burrata", 
+  {
+    "type": "file",
+    "name": "WindowsOpenSSH",
+    "label": "Windows OpenSSH"
+  }
+]
